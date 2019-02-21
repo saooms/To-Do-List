@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Card extends Model
+class TDList extends Model
 {
-    protected $table = 'cards';
+    protected $table = 'lists';
     public $Primarykey = 'id';
 }

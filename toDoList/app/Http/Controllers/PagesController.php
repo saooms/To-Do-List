@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Card;
-use App\TDList;
 
 class PagesController extends Controller
 {
@@ -15,21 +14,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $data = array();
-        $data[0] = TDList::ALL();
-        $data[1] = Card::All();
-        
-        return view('pages.index')->with('lists', $data);
-    }
-
-    public function add_card(){
-
-
-        $data = array();
-        $data[0] = TDList::ALL();
-        $data[1] = Card::All();
-        
-        return view('pages.index')-with('lists', $data);
+        return Card::All();
+        return view('pages.index');
     }
 
     /**
@@ -39,7 +25,7 @@ class PagesController extends Controller
      */
     public function create()
     {
-        return view('pages.index');
+        //
     }
 
     /**

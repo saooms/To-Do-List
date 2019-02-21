@@ -13,9 +13,33 @@
 
 </head>
 <body>
-    <main>
-        
+    <nav class="w3-bar w3-green"><h1>To Do List</h1></nav>
+    <section id="lists">
+        @if(count($lists) > 0)
+            @foreach ($lists[0] as $list)
+                <div class="list w3-ul w3-border ">
+                    <title>{{$list->title}}</title>
+                    @foreach ($lists[1] as $card)
+                        @if ($card->list_id == $list->id)
+                        <div class="card w3-card ">
+                            <header>
+                                <h2 class="w3-center">{{$card->title}}</h2>
+                                <p class="w3-center w3-hover-green">...</p>
+                            </header>
+                            <p>{{$card->text}}</p>
+                            <i onclick="" class="w3-button">x</i>
+                        </div>
+                        @endif
+                    @endforeach
+                    <a class="w3-hover-green w3-hover-shadow w3-center" href="create">add card +</a>
+                </div>
+                
+            @endforeach
+        @endif
+        <div class="w3-display-container addlst">
+            <i class="fas fa-3x fa-plus-square w3-hover-shadow w3-hover-grey w3-display-right" ></i>
+        </div>
+    </section>
     
-    </main>
 </body>
 </html>

@@ -22,3 +22,5 @@
 // });
 
 Route::Resource('', 'PagesController');
+
+Route::get('/add', 'PagesController@create_card');

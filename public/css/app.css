@@ -3,3 +3,38 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+#lists {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addlst {
+    width: 70px;
+}
+
+.fas {
+    margin: 10px;
+    border-radius: 10%;
+}
+
+.list, .card {
+    max-width: 400px;
+    margin: 10px;
+    border-radius: 5%;
+}
+
+.card header p {
+    height: 50%;
+}
+
+.card * {
+    margin: 5px;
+}
+
+.card header {
+    background-color: rgba(0, 255, 255, 0.377);
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    border-radius: 20% 0;
+}
