@@ -21,6 +21,10 @@
 //     return view('pages.index');
 // });
 
-Route::Resource('', 'PagesController');
+Route::get('', 'PagesController@index');
+Route::Resource('/cards', 'CardsController');
+Route::Resource('/lists', 'ListsController');
 
-Route::get('/add', 'PagesController@create_card');
+// Route::Resource('/lists', 'MainController');
+
+// Route::get('/add', 'PagesController@create_card');

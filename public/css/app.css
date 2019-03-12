@@ -13,9 +13,18 @@ html, body {
     width: 70px;
 }
 
+title {
+    display: inline;
+}
+
 .fas {
     margin: 10px;
     border-radius: 10%;
+}
+
+.list {
+    min-width: 320px;
+    border: 1px solid;
 }
 
 .list, .card {
@@ -33,8 +42,28 @@ html, body {
 }
 
 .card header {
-    background-color: rgba(0, 255, 255, 0.377);
+    /*  */
     display: grid;
     grid-template-columns: 10fr 1fr;
     border-radius: 20% 0;
+}
+
+#cardmaker div {
+    min-height: 600px;
+    max-width: 600px;
+}
+
+.state0 {
+    background-color: rgb(255, 82, 82);
+}
+
+.state1 {
+    background-color: rgb(240, 191, 100);
+}
+
+.state2 {
+    background-color: rgba(0, 255, 255, 0.377);
+}
+.ghost {
+    opacity: 0.5;
 }
